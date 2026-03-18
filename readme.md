@@ -6,7 +6,7 @@
 This repository contains the official implementation of the paper **"HAPQ: A Hardware-Aware Pruning and Quantization Pipeline for Event-Based SNN Detection"** (Currently under review at *MDPI Sensors*).
 
 <p align="center">
-  <img src="docs/HAPQ_overview.png" alt="HAPQ Overview" width="85%">
+  <img src="docs/images/HAPQ_overview.png" alt="HAPQ Overview" width="85%">
 </p>
 
 ## 📖 Introduction
@@ -21,7 +21,7 @@ Key features include:
 
 ## 🙏 Acknowledgments (EAS-SNN)
 This project is built upon the excellent foundational architecture of **EAS-SNN**. We would like to express our sincere gratitude to the authors of EAS-SNN for their pioneering work in event-based detection and for making their codebase publicly available. 
-* Original EAS-SNN Repository: [https://github.com/chennnng/EAS-SNN](https://github.com/chennnng/EAS-SNN) (Please leave a star for their incredible work!)
+* Original EAS-SNN Repository: [EAS-SNN](https://github.com/Windere/EAS-SNN) (Please leave a star for their incredible work!)
 
 ---
 
@@ -29,7 +29,7 @@ This project is built upon the excellent foundational architecture of **EAS-SNN*
 
 ### 1. Prophesee Gen1 Automotive Dataset
 We evaluate our HAPQ pipeline comprehensively on the Prophesee Gen1 dataset.
-* **Download Link:** [Prophesee Official Gen1 Dataset](https://www.prophesee.ai/2020/01/24/prophesee-gen1-automotive-dataset/)
+* **Download Link:** [Prophesee Official Gen1 Dataset](https://www.prophesee.ai/2020/01/24/prophesee-gen1-automotive-detection-dataset/)
 * Please follow the official Prophesee guidelines to download and pre-process the event streams into proper formats. Place the processed dataset in the `data/gen1/` directory.
 
 ### 2. Pre-trained Weights (EAS-SNN Baseline)
