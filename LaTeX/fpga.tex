@@ -1,0 +1,230 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+% --- 宏包加载 ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% --- 自定义命令 ---
+\newcommand{\SynOps}{\text{SynOps}}
+
+\begin{document}
+
+
+\begin{abstract}
+This section describes an \textbf{FPGA-faithful deployment and accelerator design} for an event-based SNN detector (baseline: EAS-SNN [1]) under the proposed hardware-aware NAS--pruning--quantization (HAPQ) framework. The goal is not to ``stack FPGA features,'' but to show how \textbf{algorithmic decisions become deterministic hardware structures}. In particular, we revisit the proposal's under-specified part---\textbf{membrane potential quantization}---and make its hardware impact explicit using resource and bandwidth analysis. Related hardware-aware compression principles are consistent with prior platform-aware adaptation and quantization lines [38--41], while SNN-specific acceleration constraints are shaped by spike-driven compute and state update locality [16,19,72].
+\end{abstract}
+
+\section{Target Edge Platform and Co-Design Boundary}
+
+\subsection{Platform Assumptions (Deployment-Realistic)}
+We target an edge SoC FPGA platform (e.g., Zynq UltraScale+ class), where:
+\begin{itemize}
+    \item the \textbf{PS (ARM)} orchestrates data movement (events / frames / metadata),
+    \item the \textbf{PL (FPGA fabric)} executes the time-stepped SNN inference,
+    \item external \textbf{DDR} stores model parameters when on-chip BRAM is insufficient,
+    \item and on-chip \textbf{BRAM/URAM} buffers weights, activations, and neuron states.
+\end{itemize}
+This PS--PL division is practical for event-based pipelines because pre-processing and batching policies can evolve without re-synthesizing the PL kernel. It also matches common FPGA deployment patterns for neural workloads [19,72].
+
+\subsection{Co-Design Boundary with HAPQ}
+The accelerator is designed around three ``hardware-truth'' constraints:
+\begin{enumerate}
+    \item \textbf{Discrete compute}: DSP slices pack integer MACs in \textbf{bitwidth-dependent SIMD modes}, so ``mixed precision'' is only useful when it maps to actual packing efficiency. This is exactly why hardware-aware quantization policies (e.g., HAQ/HAWQ families) focus on platform cost, not only model size [38,39].
+    \item \textbf{Discrete memory}: BRAM has \textbf{fixed word widths} and limited ports. Small mismatches in tensor width can cause step increases in BRAM count and stall cycles.
+    \item \textbf{Temporal state}: Unlike ANN inference, an SNN detector maintains neuron \textbf{membrane states} and often recurrent states. Their read--modify--write bandwidth can dominate latency and energy if left unquantized [76,77].
+\end{enumerate}
+HAPQ (NAS + block-structured pruning + mixed-precision QAT) is therefore treated as a \textbf{front-end compiler} that generates an architecture ($a$), a block mask ($m$), and bitwidth assignments ($q=(b_W,b_U)$) that are \textit{already aligned} to the PL's compute and memory geometry [40,41,58].
+
+\section{Workload Characterization for Event-Based SNN Detection}
+
+\subsection{Spike-Driven Synaptic Compute}
+For each layer $l$, the effective synaptic operations scale with the pre-synaptic spike rate $\rho^{(l-1)}$, as used in SNN efficiency discussions [1]. Let the dense per-step synaptic ops be $\SynOps^{(l)}_{\text{dense}}$. Under structured pruning with block keep ratio $\kappa^{(l)}(m)$,
+\begin{equation}
+\SynOps^{(l)} \approx T \cdot \rho^{(l-1)} \cdot \SynOps^{(l)}_{\text{dense}} \cdot \kappa^{(l)}(m).
+\end{equation}
+This highlights a subtle point: sparsity helps, yet \textbf{activity and hardware mapping decide whether it becomes latency reduction}. Unstructured sparsity often fails to translate to speedups due to irregular accesses and control overhead [48]. That is why we insist on \textbf{block-structured sparsity} in Section \ref{sec:pruning}.
+
+\subsection{State Update Workload (Often the Hidden Bottleneck)}
+For LIF-style neurons trained with surrogate gradients [33,34], inference uses a recurrence like:
+\begin{equation}
+u[t] = \beta u[t-1] + I[t] - \theta s[t-1],\qquad
+s[t]=\mathbb{I}(u[t]\ge \theta).
+\end{equation}
+Even if spikes are sparse, $u[t]$ is updated for every active neuron at each time step. This produces a deterministic memory traffic pattern:
+\begin{equation}
+\text{Bytes}_{U}^{(l)} \approx 2 \cdot N_l \cdot \frac{b_U^{(l)}}{8}\cdot T,
+\end{equation}
+where the factor 2 accounts for read and write of membrane state. This term is absent in ANN inference models, yet becomes central in SNN accelerators [76,77].
+
+\section{Accelerator Architecture: Streaming Time-Step Engine}
+
+\subsection{Dataflow Choice}
+We adopt a \textbf{time-step streaming dataflow}:
+\begin{itemize}
+    \item Outer loop over time steps ($t=1\ldots T$).
+    \item For each layer $l$, process a stream of spikes (or spike blocks), compute synaptic input $I^{(l)}[t]$, update membrane state $u^{(l)}[t]$, and emit output spikes $s^{(l)}[t]$.
+\end{itemize}
+This avoids storing a full ($T\times$) activation tensor. It also matches FPGA-friendly pipelining: each layer is a stage with local buffering and deterministic handshake [19,72]. When the model contains recurrent blocks (as in EAS-SNN-style designs [1]), the recurrent state is treated similarly to membrane state: persistent across time and updated in place.
+
+\subsection{Two-Level Parallelism}
+The PL kernel uses:
+\begin{itemize}
+    \item \textbf{inter-neuron parallelism}: multiple neurons/channels processed per cycle via SIMD-aligned blocks,
+    \item \textbf{intra-neuron pipelining}: fixed-depth pipeline for MAC accumulation $\to$ leak/update $\to$ threshold/reset.
+\end{itemize}
+The ``block'' concept is not cosmetic. It is the hardware binding of the pruning mask ($m$): the accelerator expects that channels are kept or removed \textbf{in SIMD-sized groups}, which is consistent with structured pruning's deployability motivation [78].
+
+\section{Block-Structured Pruning as a Hardware Contract}
+\label{sec:pruning}
+
+\subsection{Why Block-Structured, Not Elementwise}
+Elementwise pruning can reduce parameter count, but it creates:
+\begin{itemize}
+    \item irregular index lookups,
+    \item non-coalesced DDR bursts,
+    \item and extra LUT-heavy control logic.
+\end{itemize}
+Those costs frequently eliminate the expected speedups [48]. Therefore, we define block masks $m_g \in \{0,1\}$ for each SIMD-aligned weight block $g$, and enforce pruning at that granularity.
+
+\subsection{Hardware Representation of the Mask}
+At inference time, the mask is represented by:
+\begin{itemize}
+    \item a \textbf{bitmask table} stored in BRAM (per layer),
+    \item a deterministic mapping from block index $g$ to weight address,
+    \item and a \textbf{skip/gate policy}.
+\end{itemize}
+The policy is conservative: we do \textbf{not} build a fully sparse, pointer-chasing datapath. Instead, we implement \textbf{block gating}:
+\begin{itemize}
+    \item if $m_g=0$, the corresponding block's MAC lanes are gated and its weights are not fetched;
+    \item otherwise, the block is processed as dense, preserving pipeline regularity.
+\end{itemize}
+This approach keeps timing closure manageable and avoids the ``control explosion'' that often occurs with fine-grained sparsity on FPGA [72,78]. It also fits the knapsack-like selection philosophy used in the HAPQ mathematical model.
+
+\section{Mixed-Precision Compute Mapping to DSP48E2}
+
+\subsection{Integer MAC Packing Model}
+Let $b_W^{(l)}$ be the weight bitwidth, and $b_A^{(l)}$ the synaptic input bitwidth (spikes are 1-bit, but post-conv partial sums are wider). DSP slices can pack multiple low-bit MACs depending on $b_W^{(l)}$. We define an empirical packing factor $\nu_{\text{DSP}}(b_W)$, similar in spirit to platform-aware quantization cost models [38,39]:
+\begin{equation}
+\text{MACs per cycle} \propto R_{\text{DSP}} \cdot \nu_{\text{DSP}}(b_W).
+\end{equation}
+HAPQ selects $b_W^{(l)}$ so that $\nu_{\text{DSP}}(b_W^{(l)})$ sits on ``good'' packing points. If a layer is assigned a bitwidth that does not improve packing, the theoretical quantization benefit does not convert into latency reduction.
+
+\subsection{Accumulator Width and Saturation}
+Even with low-bit weights, partial sums require guard bits. We implement:
+\begin{itemize}
+    \item \textbf{widened accumulators} to avoid overflow,
+    \item then \textbf{requantization} back to the chosen fixed-point format.
+\end{itemize}
+This is standard in integer-only inference pipelines [43], but SNN adds a second requantization point: the membrane update (Section \ref{sec:membrane}).
+
+\section{Membrane Potential Quantization: From ``Vague'' to Hardware-Decisive}
+\label{sec:membrane}
+
+The proposal notes membrane/state as a bottleneck but leaves the FPGA-side implication under-specified. We make it explicit: \textbf{state precision controls BRAM packing, BRAM port pressure, and therefore latency/energy} [76,77].
+
+\subsection{State Storage Requirement}
+For layer $l$, storing membrane $u^{(l)}$ for $N_l$ neurons requires:
+\begin{equation}
+S_U^{(l)} = N_l \cdot b_U^{(l)} \quad \text{bits}.
+\end{equation}
+Total state memory is $\sum_l S_U^{(l)}$. After structured pruning, $N_l$ decreases with channel removal, which directly reduces state memory---this creates a genuine coupling between pruning and membrane storage that does not exist in ANN compression [48,78].
+
+\subsection{BRAM Packing and State Throughput}
+Assume a BRAM word width $W_{\text{bram}}$ (e.g., 36 or 72 bits in common configurations). The number of neuron states packed per word is:
+\begin{equation}
+p^{(l)} = \left\lfloor \frac{W_{\text{bram}}}{b_U^{(l)}} \right\rfloor.
+\end{equation}
+With two BRAM ports (or banking), the maximum state updates per cycle scale with $p^{(l)}$. Therefore, membrane bitwidth impacts the achievable \textbf{state-update throughput}:
+\begin{equation}
+\Pi_{U}^{(l)} \propto p^{(l)}.
+\end{equation}
+This creates a concrete design rule: lowering $b_U^{(l)}$ can reduce cycles even if synaptic compute is already optimized. That observation aligns with SNN-specific quantization motivations [76,77].
+
+\subsection{Shift-Friendly Leak for RTL Efficiency}
+To avoid multipliers in the membrane recurrence, we constrain leak:
+\begin{equation}
+\beta^{(l)} = 1 - 2^{-n^{(l)}}.
+\end{equation}
+Then
+\begin{equation}
+\beta u = u - (u \gg n^{(l)}),
+\end{equation}
+so the membrane update is implemented with shift-add, not multiply. This reduces DSP usage and improves timing closure in practice. It also keeps the recurrence stable under low-bit state quantization, which is a known training/deployment concern [34,76].
+
+\subsection{Quantized Membrane Update Datapath}
+Let $Q_{b}(x)$ be a uniform quantizer. The deployable recurrence becomes:
+\begin{equation}
+\begin{aligned}
+u_q[t] &= Q_{b_U}\Big(
+u_q[t-1] - (u_q[t-1]\gg n) + I_q[t] - \theta_q s[t-1]
+\Big), \\
+s[t] &= \mathbb{I}(u_q[t]\ge \theta_q).
+\end{aligned}
+\end{equation}
+In RTL, this maps to a fixed pipeline:
+\begin{enumerate}
+    \item BRAM read $u_q[t-1]$
+    \item shift $\to$ subtract (leak)
+    \item add synaptic input $I_q[t]$
+    \item threshold compare $\to$ spike bit
+    \item conditional subtract (soft reset)
+    \item quantize/saturate $\to$ BRAM write $u_q[t]$
+\end{enumerate}
+The key is that \textbf{the BRAM interface is deterministic} and can be fully pipelined. It does not depend on event sparsity. Hence, it must be included in the latency model and in the HAPQ bitwidth decisions [76,77].
+
+\section{Memory Hierarchy and Scheduling (Vivado-Accurate Perspective)}
+
+\subsection{Weight and Feature Buffers}
+We partition storage into:
+\begin{itemize}
+    \item on-chip BRAM caches for hot weights / masks / state,
+    \item DDR for cold weights when the model exceeds BRAM capacity.
+\end{itemize}
+The scheduler enforces burst-friendly DDR access by ordering blocks in physical memory order. Block-structured pruning helps here: contiguous kept blocks remain contiguous in memory, which is not true for unstructured pruning [48,78].
+
+\subsection{Double Buffering and Layer Fusion}
+To hide DDR latency, we use \textbf{double buffering}:
+\begin{itemize}
+    \item buffer A serves compute,
+    \item buffer B is refilled by DMA.
+\end{itemize}
+Layer fusion is used sparingly. In practice, fusion is applied only when it reduces BRAM traffic without complicating timing closure. This is a typical FPGA tradeoff: a more ``clever'' graph schedule can lose clock frequency after place-and-route, which defeats the purpose.
+
+\subsection{Timing Closure as a First-Class Constraint}
+All throughput claims are bounded by the achieved $f_{\text{clk}}$. This is not an afterthought. Hardware-aware design methods explicitly treat timing closure as part of the optimization loop [40,41]. In our flow, if a candidate design requires additional routing congestion (e.g., too many parallel MAC lanes), we reduce parallelism and compensate with bitwidth packing or pruning.
+
+\section{End-Side Compute Simulation and Deployment Methodology}
+
+\subsection{Three-Level Evaluation Stack}
+To keep the paper aligned with FPGA reality, we evaluate performance in three progressively faithful layers:
+\begin{enumerate}
+    \item \textbf{Analytic estimator} (fast): uses SynOps, block keep ratios, state-update throughput, and BRAM/DSP packing to predict cycles. It is used during NAS and pruning decisions [38--41].
+    \item \textbf{Cycle-accurate RTL/HLS simulation} (faithful): validates control flow, BRAM port conflicts, and pipeline initiation interval. This catches errors the analytic model cannot.
+    \item \textbf{On-board measurement} (ground truth): reports Vivado post-implementation utilization, achieved $f_{\text{clk}}$, end-to-end latency, and board-level power. This is the final check used in FPGA SNN accelerator studies [19,72].
+\end{enumerate}
+
+\subsection{What ``Latency'' Means for Event-Based Detection}
+We report latency as:
+\begin{itemize}
+    \item \textbf{per event window} (e.g., fixed $T$ steps),
+    \item and, when applicable, \textbf{per detection output}.
+\end{itemize}
+This is important because event rates vary. A ``per-frame'' metric can be misleading if the input event density changes [29].
+
+\section{Discussion: Why This Design Matches the Research Thesis}
+The accelerator is intentionally simple in structure, yet strict in contract:
+\begin{itemize}
+    \item \textbf{Structured pruning} is enforced as a hardware mapping constraint, not a cosmetic compression technique [48,78].
+    \item \textbf{Mixed precision} is used only where it produces real DSP packing or BRAM packing improvements [38,39].
+    \item \textbf{Membrane quantization} is treated as a first-order hardware lever because it directly changes BRAM bandwidth pressure and state-update throughput [76,77].
+    \item The result is a pipeline where algorithmic choices translate to predictable resource and latency outcomes, aligning with the paper's ``hardware-aware'' claim rather than relying on post-hoc acceleration stories [40,41,72].
+\end{itemize}
+
+\end{document}

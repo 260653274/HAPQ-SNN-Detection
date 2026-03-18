@@ -1,0 +1,816 @@
+2026-02-28 06:10:45.163 | INFO     | __main__:maybe_load_ckpt:67 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-28 06:10:45.315 | WARNING  | __main__:maybe_load_ckpt:81 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-28 06:10:45.315 | WARNING  | __main__:maybe_load_ckpt:83 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-28 06:10:45.315 | INFO     | __main__:main:331 - Overriding HAPQ config: W=8, U=6
+2026-02-28 06:10:47.877 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-28 06:10:47.877 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-28 06:10:47.877 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-28 06:10:48.932 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-28 06:10:48.932 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-28 06:10:48.932 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-28 06:22:27.020 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 06:22:27.023 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 06:22:27.025 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 06:22:27.026 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 06:22:27.027 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 06:22:27.028 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 06:22:27.029 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 06:22:27.030 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 06:22:27.031 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 06:22:27.031 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 06:22:27.032 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 06:22:27.033 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 06:22:27.034 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 06:22:27.035 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 06:22:27.036 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 06:22:27.037 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 06:23:44.998 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 06:23:45.030 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 06:36:36.140 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 06:36:36.272 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 06:48:18.144 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 06:48:18.149 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 06:48:18.150 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 06:48:18.151 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 06:48:18.152 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 06:48:18.153 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 06:48:18.154 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 06:48:18.155 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 06:48:18.156 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 06:48:18.156 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 06:48:18.157 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 06:48:18.158 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 06:48:18.159 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 06:48:18.160 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 06:48:18.161 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 06:48:18.162 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 06:49:34.382 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 06:49:34.410 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 07:02:24.383 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 07:02:24.448 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 07:14:05.107 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 07:14:05.170 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 07:14:05.171 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 07:14:05.172 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 07:14:05.173 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 07:14:05.175 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 07:14:05.175 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 07:14:05.177 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 07:14:05.177 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 07:14:05.178 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 07:14:05.179 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 07:14:05.180 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 07:14:05.181 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 07:14:05.183 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 07:14:05.184 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 07:14:05.185 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 07:15:19.671 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 07:15:19.693 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 07:26:59.476 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 07:26:59.480 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 07:26:59.481 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 07:26:59.482 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 07:26:59.483 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 07:26:59.484 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 07:26:59.485 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 07:26:59.486 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 07:26:59.488 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 07:26:59.488 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 07:26:59.489 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 07:26:59.490 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 07:26:59.491 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 07:26:59.492 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 07:26:59.493 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 07:26:59.494 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 07:28:13.328 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 07:28:13.417 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 07:39:51.200 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 07:39:51.204 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 07:39:51.205 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 07:39:51.206 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 07:39:51.207 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 07:39:51.208 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 07:39:51.209 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 07:39:51.210 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 07:39:51.211 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 07:39:51.212 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 07:39:51.213 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 07:39:51.214 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 07:39:51.215 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 07:39:51.216 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 07:39:51.217 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 07:39:51.218 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 07:41:03.918 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 07:41:03.938 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 07:52:42.523 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 07:52:42.527 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 07:52:42.528 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 07:52:42.529 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 07:52:42.530 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 07:52:42.531 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 07:52:42.532 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 07:52:42.533 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 07:52:42.534 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 07:52:42.535 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 07:52:42.536 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 07:52:42.537 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 07:52:42.538 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 07:52:42.539 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 07:52:42.540 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 07:52:42.541 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 07:53:57.657 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 07:53:57.680 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 08:05:39.102 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 08:05:39.107 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 08:05:39.108 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 08:05:39.109 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 08:05:39.110 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 08:05:39.111 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 08:05:39.112 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 08:05:39.113 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 08:05:39.114 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 08:05:39.115 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 08:05:39.116 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 08:05:39.117 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 08:05:39.118 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 08:05:39.119 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 08:05:39.120 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 08:05:39.121 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 08:06:53.315 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 08:06:53.338 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 08:18:32.425 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 08:18:32.429 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 08:18:32.430 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 08:18:32.431 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 08:18:32.432 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 08:18:32.433 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 08:18:32.434 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 08:18:32.435 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 08:18:32.436 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 08:18:32.437 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 08:18:32.438 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 08:18:32.439 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 08:18:32.440 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 08:18:32.441 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 08:18:32.442 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 08:18:32.443 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 08:19:46.609 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 08:19:46.628 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 08:31:34.605 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 08:31:34.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 08:31:34.610 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 08:31:34.611 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 08:31:34.612 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 08:31:34.613 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 08:31:34.614 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 08:31:34.615 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 08:31:34.616 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 08:31:34.617 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 08:31:34.618 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 08:31:34.619 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 08:31:34.620 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 08:31:34.621 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 08:31:34.622 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 08:31:34.623 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 08:32:51.924 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 08:32:51.979 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 08:44:30.160 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 08:44:30.165 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 08:44:30.166 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 08:44:30.167 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 08:44:30.168 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 08:44:30.169 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 08:44:30.170 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 08:44:30.171 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 08:44:30.172 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 08:44:30.173 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 08:44:30.174 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 08:44:30.175 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 08:44:30.176 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 08:44:30.177 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 08:44:30.177 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 08:44:30.178 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 08:45:45.237 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 08:45:45.261 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 08:57:22.156 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 08:57:22.161 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 08:57:22.162 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 08:57:22.163 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 08:57:22.164 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 08:57:22.166 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 08:57:22.167 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 08:57:22.168 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 08:57:22.169 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 08:57:22.169 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 08:57:22.170 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 08:57:22.171 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 08:57:22.172 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 08:57:22.174 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 08:57:22.174 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 08:57:22.175 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 08:58:37.455 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 08:58:37.474 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 09:11:31.616 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 09:11:31.703 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 09:23:08.474 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 09:23:08.478 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 09:23:08.480 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 09:23:08.481 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 09:23:08.482 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 09:23:08.483 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 09:23:08.484 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 09:23:08.485 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 09:23:08.486 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 09:23:08.486 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 09:23:08.487 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 09:23:08.488 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 09:23:08.489 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 09:23:08.490 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 09:23:08.491 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 09:23:08.492 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 09:24:22.092 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 09:24:22.119 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 09:36:00.836 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 09:36:00.840 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 09:36:00.841 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 09:36:00.842 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 09:36:00.843 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 09:36:00.844 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 09:36:00.845 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 09:36:00.846 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 09:36:00.847 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 09:36:00.848 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 09:36:00.849 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 09:36:00.850 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 09:36:00.851 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 09:36:00.852 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 09:36:00.853 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 09:36:00.854 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 09:37:14.788 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 09:37:14.802 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 09:37:51.325 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 09:37:51.328 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 09:37:51.330 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 09:37:51.331 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 09:37:51.332 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 09:37:51.333 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 09:37:51.333 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 09:37:51.334 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 09:37:51.335 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 09:37:51.336 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 09:37:51.337 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 09:37:51.338 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 09:37:51.339 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 09:37:51.340 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 09:37:51.341 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 09:37:51.342 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 09:48:53.866 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 09:48:53.870 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 09:48:53.871 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 09:48:53.872 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 09:48:53.873 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 09:48:53.874 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 09:48:53.875 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 09:48:53.876 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 09:48:53.877 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 09:48:53.878 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 09:48:53.879 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 09:48:53.880 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 09:48:53.882 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 09:48:53.883 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 09:48:53.885 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 09:48:53.886 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 09:50:07.469 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 09:50:07.528 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 10:02:56.933 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 10:02:56.948 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 10:03:33.580 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 10:03:33.584 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 10:03:33.586 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 10:03:33.587 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 10:03:33.588 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 10:03:33.589 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 10:03:33.590 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 10:03:33.591 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 10:03:33.592 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 10:03:33.593 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 10:03:33.594 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 10:03:33.595 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 10:03:33.596 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 10:03:33.597 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 10:03:33.598 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 10:03:33.600 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 10:15:51.034 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 10:15:51.047 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 10:27:28.942 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 10:27:28.947 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 10:27:28.948 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 10:27:28.949 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 10:27:28.950 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 10:27:28.951 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 10:27:28.952 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 10:27:28.954 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 10:27:28.955 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 10:27:28.956 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 10:27:28.957 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 10:27:28.958 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 10:27:28.959 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 10:27:28.960 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 10:27:28.961 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 10:27:28.962 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 10:28:41.667 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 10:28:41.680 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 10:40:23.237 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 10:40:23.241 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 10:40:23.243 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 10:40:23.244 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 10:40:23.245 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 10:40:23.246 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 10:40:23.247 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 10:40:23.248 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 10:40:23.249 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 10:40:23.250 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 10:40:23.250 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 10:40:23.252 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 10:40:23.253 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 10:40:23.254 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 10:40:23.255 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 10:40:23.255 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 10:41:38.595 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 10:41:38.635 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 10:53:17.590 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 10:53:17.594 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 10:53:17.596 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 10:53:17.597 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 10:53:17.598 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 10:53:17.600 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 10:53:17.601 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 10:53:17.602 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 10:53:17.603 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 10:53:17.604 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 10:53:17.604 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 10:53:17.605 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 10:53:17.606 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 10:53:17.607 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 10:53:17.608 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 10:53:17.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 10:54:32.558 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 10:54:32.609 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 11:06:14.493 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 11:06:14.497 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 11:06:14.498 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 11:06:14.500 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 11:06:14.501 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 11:06:14.502 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 11:06:14.503 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 11:06:14.504 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 11:06:14.505 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 11:06:14.506 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 11:06:14.506 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 11:06:14.508 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 11:06:14.509 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 11:06:14.510 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 11:06:14.511 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 11:06:14.512 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 11:07:30.043 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 11:07:30.058 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 11:19:07.706 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 11:19:07.730 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 11:19:07.731 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 11:19:07.732 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 11:19:07.733 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 11:19:07.735 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 11:19:07.736 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 11:19:07.737 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 11:19:07.738 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 11:19:07.739 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 11:19:07.740 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 11:19:07.741 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 11:19:07.743 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 11:19:07.744 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 11:19:07.745 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 11:19:07.746 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 11:20:20.470 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 11:20:20.483 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 11:33:16.786 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 11:33:16.857 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 11:33:53.425 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 11:33:53.429 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 11:33:53.431 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 11:33:53.432 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 11:33:53.433 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 11:33:53.434 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 11:33:53.435 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 11:33:53.436 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 11:33:53.437 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 11:33:53.438 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 11:33:53.439 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 11:33:53.440 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 11:33:53.440 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 11:33:53.442 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 11:33:53.443 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 11:33:53.443 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 11:46:13.661 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 11:46:13.685 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 11:59:10.238 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 11:59:10.269 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 12:10:53.136 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 12:10:53.140 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 12:10:53.142 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 12:10:53.143 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 12:10:53.144 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 12:10:53.145 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 12:10:53.146 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 12:10:53.147 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 12:10:53.148 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 12:10:53.149 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 12:10:53.150 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 12:10:53.151 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 12:10:53.152 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 12:10:53.153 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 12:10:53.154 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 12:10:53.155 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 12:12:07.697 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 12:12:07.775 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 12:23:51.240 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 12:23:51.243 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 12:23:51.245 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 12:23:51.246 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 12:23:51.247 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 12:23:51.249 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 12:23:51.250 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 12:23:51.251 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 12:23:51.251 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 12:23:51.252 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 12:23:51.253 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 12:23:51.254 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 12:23:51.255 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 12:23:51.256 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 12:23:51.257 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 12:23:51.258 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 12:25:05.730 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 12:25:05.749 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 12:36:54.506 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 12:36:54.551 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 12:36:54.552 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 12:36:54.553 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 12:36:54.554 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 12:36:54.555 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 12:36:54.556 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 12:36:54.557 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 12:36:54.558 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 12:36:54.559 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 12:36:54.560 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 12:36:54.561 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 12:36:54.562 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 12:36:54.563 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 12:36:54.564 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 12:36:54.565 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 12:38:07.247 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 12:38:07.259 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 12:49:46.204 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 12:49:46.209 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 12:49:46.210 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 12:49:46.211 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 12:49:46.212 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 12:49:46.213 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 12:49:46.214 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 12:49:46.215 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 12:49:46.216 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 12:49:46.217 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 12:49:46.218 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 12:49:46.219 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 12:49:46.220 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 12:49:46.221 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 12:49:46.221 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 12:49:46.222 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 12:50:59.020 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 12:50:59.054 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 13:02:37.562 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 13:02:37.566 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 13:02:37.567 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 13:02:37.568 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 13:02:37.569 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 13:02:37.570 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 13:02:37.571 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 13:02:37.572 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 13:02:37.573 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 13:02:37.574 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 13:02:37.575 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 13:02:37.576 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 13:02:37.577 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 13:02:37.578 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 13:02:37.579 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 13:02:37.580 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 13:03:51.436 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 13:03:51.448 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 13:15:35.155 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 13:15:35.159 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 13:15:35.161 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 13:15:35.162 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 13:15:35.163 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 13:15:35.164 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 13:15:35.165 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 13:15:35.166 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 13:15:35.167 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 13:15:35.168 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 13:15:35.169 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 13:15:35.171 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 13:15:35.172 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 13:15:35.173 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 13:15:35.174 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 13:15:35.175 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 13:16:48.642 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 13:16:48.654 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 13:28:26.247 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 13:28:26.251 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 13:28:26.252 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 13:28:26.253 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 13:28:26.254 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 13:28:26.255 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 13:28:26.256 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 13:28:26.257 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 13:28:26.258 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 13:28:26.259 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 13:28:26.260 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 13:28:26.261 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 13:28:26.262 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 13:28:26.263 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 13:28:26.264 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 13:28:26.265 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 13:29:41.485 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 13:29:41.498 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 13:42:47.492 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 13:42:47.547 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 13:54:25.555 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 13:54:25.560 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 13:54:25.561 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 13:54:25.562 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 13:54:25.563 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 13:54:25.564 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 13:54:25.565 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 13:54:25.566 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 13:54:25.567 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 13:54:25.568 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 13:54:25.569 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 13:54:25.570 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 13:54:25.571 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 13:54:25.572 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 13:54:25.573 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 13:54:25.574 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 13:55:40.163 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 13:55:40.243 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 14:07:30.210 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 14:07:30.215 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 14:07:30.216 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 14:07:30.217 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 14:07:30.219 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 14:07:30.220 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 14:07:30.221 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 14:07:30.222 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 14:07:30.223 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 14:07:30.223 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 14:07:30.224 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 14:07:30.225 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 14:07:30.226 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 14:07:30.228 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 14:07:30.229 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 14:07:30.230 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 14:08:43.432 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 14:08:43.453 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 14:20:20.592 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 14:20:20.596 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 14:20:20.597 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 14:20:20.598 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 14:20:20.599 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 14:20:20.600 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 14:20:20.601 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 14:20:20.602 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 14:20:20.603 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 14:20:20.604 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 14:20:20.605 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 14:20:20.606 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 14:20:20.607 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 14:20:20.608 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 14:20:20.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 14:20:20.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 14:21:35.361 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 14:21:35.373 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 14:33:19.106 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 14:33:19.109 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 14:33:19.111 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 14:33:19.112 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 14:33:19.113 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 14:33:19.114 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 14:33:19.115 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 14:33:19.116 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 14:33:19.117 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 14:33:19.118 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 14:33:19.119 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 14:33:19.120 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 14:33:19.121 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 14:33:19.122 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 14:33:19.123 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 14:33:19.123 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 14:34:33.201 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 14:34:33.213 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 14:34:49.598 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 14:34:49.602 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 14:34:49.603 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 14:34:49.604 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 14:34:49.605 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 14:34:49.606 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 14:34:49.607 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 14:34:49.608 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 14:34:49.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 14:34:49.610 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 14:34:49.611 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 14:34:49.612 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 14:34:49.614 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 14:34:49.615 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 14:34:49.616 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 14:34:49.617 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 14:46:13.075 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 14:46:13.079 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 14:46:13.081 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 14:46:13.082 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 14:46:13.083 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 14:46:13.084 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 14:46:13.085 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 14:46:13.086 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 14:46:13.087 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 14:46:13.087 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 14:46:13.088 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 14:46:13.089 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 14:46:13.090 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 14:46:13.091 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 14:46:13.092 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 14:46:13.093 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 14:47:26.365 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 14:47:26.385 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 14:59:11.462 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 14:59:11.537 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 14:59:11.538 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 14:59:11.539 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 14:59:11.540 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 14:59:11.542 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 14:59:11.542 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 14:59:11.543 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 14:59:11.544 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 14:59:11.545 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 14:59:11.546 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 14:59:11.547 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 14:59:11.548 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 14:59:11.549 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 14:59:11.550 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 14:59:11.552 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 15:00:28.487 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 15:00:28.502 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 15:12:14.089 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 15:12:14.093 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 15:12:14.094 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 15:12:14.096 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 15:12:14.097 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 15:12:14.098 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 15:12:14.099 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 15:12:14.100 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 15:12:14.101 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 15:12:14.102 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 15:12:14.103 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 15:12:14.104 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 15:12:14.105 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 15:12:14.106 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 15:12:14.107 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 15:12:14.108 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 15:13:29.590 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 15:13:29.624 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 15:25:10.603 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 15:25:10.607 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 15:25:10.608 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 15:25:10.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 15:25:10.610 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 15:25:10.611 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 15:25:10.612 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 15:25:10.613 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 15:25:10.614 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 15:25:10.615 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 15:25:10.616 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 15:25:10.617 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 15:25:10.618 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 15:25:10.619 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 15:25:10.620 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 15:25:10.621 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 15:26:23.482 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 15:26:23.506 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 15:38:00.604 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 15:38:00.607 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 15:38:00.608 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 15:38:00.609 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 15:38:00.610 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 15:38:00.612 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 15:38:00.613 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 15:38:00.614 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 15:38:00.614 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 15:38:00.615 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 15:38:00.616 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 15:38:00.617 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 15:38:00.618 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 15:38:00.619 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 15:38:00.620 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 15:38:00.621 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 15:39:13.661 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 15:39:13.672 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 15:50:51.223 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 15:50:51.227 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 15:50:51.228 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 15:50:51.229 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 15:50:51.230 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 15:50:51.231 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 15:50:51.232 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 15:50:51.233 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 15:50:51.234 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 15:50:51.235 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 15:50:51.236 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 15:50:51.237 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 15:50:51.238 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 15:50:51.240 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 15:50:51.241 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 15:50:51.241 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 15:52:04.169 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 15:52:04.246 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 16:03:46.022 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 16:03:46.148 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 16:03:46.151 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 16:03:46.152 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 16:03:46.154 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 16:03:46.156 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 16:03:46.157 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 16:03:46.158 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 16:03:46.159 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 16:03:46.160 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 16:03:46.161 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 16:03:46.163 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 16:03:46.164 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 16:03:46.165 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 16:03:46.166 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 16:03:46.167 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 16:05:00.250 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 16:05:00.263 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 16:17:51.362 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 16:17:51.375 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 16:34:05.218 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 16:34:05.222 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 16:34:05.223 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 16:34:05.224 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 16:34:05.225 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 16:34:05.226 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 16:34:05.227 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 16:34:05.228 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 16:34:05.228 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 16:34:05.229 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 16:34:05.230 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 16:34:05.231 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 16:34:05.232 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 16:34:05.233 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 16:34:05.234 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 16:34:05.235 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 16:35:47.424 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 16:35:47.436 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 16:52:02.904 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 16:52:02.908 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 16:52:02.909 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 16:52:02.910 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 16:52:02.911 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 16:52:02.912 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 16:52:02.913 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 16:52:02.914 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 16:52:02.915 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 16:52:02.915 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 16:52:02.916 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 16:52:02.917 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 16:52:02.918 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 16:52:02.919 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 16:52:02.920 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 16:52:02.921 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 16:53:44.767 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 16:53:44.778 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 17:09:59.509 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-28 17:09:59.513 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-28 17:09:59.514 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-28 17:09:59.515 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-28 17:09:59.516 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-28 17:09:59.517 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-28 17:09:59.518 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-28 17:09:59.519 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-28 17:09:59.520 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-28 17:09:59.521 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-28 17:09:59.522 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-28 17:09:59.523 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-28 17:09:59.524 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-28 17:09:59.525 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-28 17:09:59.526 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-28 17:09:59.527 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-28 17:11:41.236 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-28 17:11:41.248 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-28 17:11:41.477 | INFO     | __main__:main:352 - HAPQ summary copied to experiments/gen1_hapq/sweep_bu/gen1_sweep_bu_u6.json
+2026-02-28 17:11:41.477 | INFO     | __main__:main:353 - HAPQ pipeline done. Summary: ./YOLOX_outputs/gen1_sweep_bu_u6/hapq_summary.json

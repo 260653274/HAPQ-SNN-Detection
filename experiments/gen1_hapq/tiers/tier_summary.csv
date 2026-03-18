@@ -1,0 +1,5 @@
+tier,experiment,mAP,lat_est,eng_est,dsp_est,bram_est,summary_json
+Tiny,gen1_hapq_tier_tiny,0.29000715404832034,148.11688426624744,6.748879681654225,5507.0,25.0,experiments/gen1_hapq/tiers/gen1_hapq_tier_tiny.json
+Small,gen1_hapq_tier_small,0.30104508245342154,148.11688426624744,6.748879681654225,5507.0,25.0,experiments/gen1_hapq/tiers/gen1_hapq_tier_small.json
+Medium,gen1_hapq_tier_medium,0.2907269096079764,148.11688426624744,6.748879681654225,5507.0,25.0,experiments/gen1_hapq/tiers/gen1_hapq_tier_medium.json
+Large,gen1_hapq_tier_large,0.29151170647286123,148.11688426624744,6.748879681654225,5507.0,25.0,experiments/gen1_hapq/tiers/gen1_hapq_tier_large.json

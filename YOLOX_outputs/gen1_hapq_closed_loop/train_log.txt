@@ -1,0 +1,718 @@
+2026-02-13 23:16:49.144 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-13 23:16:49.277 | ERROR    | __main__:<module>:302 - An error has been caught in function '<module>', process 'MainProcess' (36895), thread 'MainThread' (134437846013760):
+Traceback (most recent call last):
+
+> File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 302, in <module>
+    main(exp, args)
+    │    │    └ Namespace(experiment_name='gen1_hapq_closed_loop', name=None, exp_file='exps/default/e_yolox_s_hapq.py', batch_size=16, ckpt=...
+    │    └ ╒═════════════════════════╤══════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x7a43d96c7100>
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 156, in main
+    maybe_load_ckpt(model, args.ckpt, device="cpu")
+    │               │      │    └ 'ckpt/best_ckpt.pth'
+    │               │      └ Namespace(experiment_name='gen1_hapq_closed_loop', name=None, exp_file='exps/default/e_yolox_s_hapq.py', batch_size=16, ckpt=...
+    │               └ YOLOX(
+    │                   (embedding): SpikeCountEmbedding()
+    │                   (backbone): YOLOPAFPN(
+    │                     (backbone): CSPDarknet(
+    │                       (stem): Focus(
+    │                        ...
+    └ <function maybe_load_ckpt at 0x7a43f0f23f60>
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 65, in maybe_load_ckpt
+    state = torch.load(ckpt_path, map_location=device)
+            │     │    │                       └ 'cpu'
+            │     │    └ 'ckpt/best_ckpt.pth'
+            │     └ <function load at 0x7a4482bf2980>
+            └ <module 'torch' from '/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/__init__.py'>
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/serialization.py", line 1529, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+          │      │               └ <function load.<locals>._get_wo_message at 0x7a453f44cc20>
+          │      └ <class '_pickle.UnpicklingError'>
+          └ <module 'pickle' from '/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/pickle.py'>
+
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy.core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy.core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy.core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-13 23:18:29.881 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-13 23:18:29.935 | WARNING  | __main__:maybe_load_ckpt:78 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-13 23:18:29.935 | WARNING  | __main__:maybe_load_ckpt:80 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-13 23:18:32.707 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-13 23:18:32.707 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-13 23:18:32.707 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-13 23:18:33.889 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-13 23:18:33.889 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-13 23:18:33.889 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-13 23:30:46.266 | ERROR    | __main__:<module>:310 - An error has been caught in function '<module>', process 'MainProcess' (37056), thread 'MainThread' (137274195310400):
+Traceback (most recent call last):
+
+> File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 310, in <module>
+    main(exp, args)
+    │    │    └ Namespace(experiment_name='gen1_hapq_closed_loop', name=None, exp_file='exps/default/e_yolox_s_hapq.py', batch_size=16, ckpt=...
+    │    └ ╒═════════════════════════╤══════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x7cd83d2eb100>
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 285, in main
+    result = pipeline.run(model=model, output_dir=output_dir)
+             │        │         │                 └ './YOLOX_outputs/gen1_hapq_closed_loop'
+             │        │         └ YOLOX(
+             │        │             (embedding): SpikeCountEmbedding()
+             │        │             (backbone): YOLOPAFPN(
+             │        │               (backbone): CSPDarknet(
+             │        │                 (stem): Focus(
+             │        │                  ...
+             │        └ <function HAPQPipeline.run at 0x7cd83d2eaf20>
+             └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x7cd847ca3610>
+
+  File "/home/xlang/EAS-SNN/yolox/hapq/pipeline/hapq_pipeline.py", line 137, in run
+    stage_metrics["qat"] = self.run_qat_cb(model)
+    │                      │    │          └ YOLOX(
+    │                      │    │              (embedding): SpikeCountEmbedding()
+    │                      │    │              (backbone): YOLOPAFPN(
+    │                      │    │                (backbone): CSPDarknet(
+    │                      │    │                  (stem): Focus(
+    │                      │    │                   ...
+    │                      │    └ <function main.<locals>.run_qat at 0x7cd83d266de0>
+    │                      └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x7cd847ca3610>
+    └ {'baseline': {'status': 1.0, 'note': 0.0}, 'calibration': {'status': 1.0}, 'pruning_quantization': {'keep_ratio': 0.58203125,...
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 221, in run_qat
+    outputs = _model(inps, targets)
+              │      │     └ <unprintable Tensor object>
+              │      └ <unprintable Tensor object>
+              └ YOLOX(
+                  (embedding): SpikeCountEmbedding()
+                  (backbone): YOLOPAFPN(
+                    (backbone): CSPDarknet(
+                      (stem): Focus(
+                       ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x7cd898111620>
+           └ YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarknet(
+                   (stem): Focus(
+                    ...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOX.forward of YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarkne...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolox.py", line 46, in forward
+    loss, iou_loss, conf_loss, cls_loss, l1_loss, num_fg = self.head(
+                                                           └ YOLOX(
+                                                               (embedding): SpikeCountEmbedding()
+                                                               (backbone): YOLOPAFPN(
+                                                                 (backbone): CSPDarknet(
+                                                                   (stem): Focus(
+                                                                    ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x7cd898111620>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOXHead.forward of YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                 ...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 195, in forward
+    return self.get_losses(
+           │    └ <function YOLOXHead.get_losses at 0x7cd83d34f560>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 311, in get_losses
+    ) = self.get_assignments(  # noqa
+        │    └ <function YOLOXHead.get_assignments at 0x7cd83d34f740>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ <unprintable tuple object>
+           └ <function YOLOXHead.get_assignments at 0x7cd83d34f6a0>
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 497, in get_assignments
+    ) = self.simota_matching(cost, pair_wise_ious, gt_classes, num_gt, fg_mask)
+        │    │               │     │               │           │       └ <unprintable Tensor object>
+        │    │               │     │               │           └ 4
+        │    │               │     │               └ <unprintable Tensor object>
+        │    │               │     └ <unprintable Tensor object>
+        │    │               └ <unprintable Tensor object>
+        │    └ <function YOLOXHead.simota_matching at 0x7cd83d34f880>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 552, in simota_matching
+    _, pos_idx = torch.topk(
+    │            │     └ <built-in method topk of type object at 0x7cd9953cc4c0>
+    │            └ <module 'torch' from '/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/__init__.py'>
+    └ <unprintable Tensor object>
+
+torch.AcceleratorError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2026-02-13 23:39:06.197 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-13 23:39:06.253 | WARNING  | __main__:maybe_load_ckpt:78 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-13 23:39:06.253 | WARNING  | __main__:maybe_load_ckpt:80 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-13 23:39:08.900 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-13 23:39:08.900 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-13 23:39:08.900 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-13 23:39:10.036 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-13 23:39:10.037 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-13 23:39:10.037 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-13 23:51:22.507 | ERROR    | __main__:<module>:310 - An error has been caught in function '<module>', process 'MainProcess' (39748), thread 'MainThread' (124322060117824):
+Traceback (most recent call last):
+
+> File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 310, in <module>
+    main(exp, args)
+    │    │    └ Namespace(experiment_name='gen1_hapq_closed_loop', name=None, exp_file='exps/default/e_yolox_s_hapq.py', batch_size=16, ckpt=...
+    │    └ ╒═════════════════════════╤══════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x711095a0b100>
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 285, in main
+    result = pipeline.run(model=model, output_dir=output_dir)
+             │        │         │                 └ './YOLOX_outputs/gen1_hapq_closed_loop'
+             │        │         └ YOLOX(
+             │        │             (embedding): SpikeCountEmbedding()
+             │        │             (backbone): YOLOPAFPN(
+             │        │               (backbone): CSPDarknet(
+             │        │                 (stem): Focus(
+             │        │                  ...
+             │        └ <function HAPQPipeline.run at 0x711095a0af20>
+             └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x71109f327a10>
+
+  File "/home/xlang/EAS-SNN/yolox/hapq/pipeline/hapq_pipeline.py", line 137, in run
+    stage_metrics["qat"] = self.run_qat_cb(model)
+    │                      │    │          └ YOLOX(
+    │                      │    │              (embedding): SpikeCountEmbedding()
+    │                      │    │              (backbone): YOLOPAFPN(
+    │                      │    │                (backbone): CSPDarknet(
+    │                      │    │                  (stem): Focus(
+    │                      │    │                   ...
+    │                      │    └ <function main.<locals>.run_qat at 0x711095b82de0>
+    │                      └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x71109f327a10>
+    └ {'baseline': {'status': 1.0, 'note': 0.0}, 'calibration': {'status': 1.0}, 'pruning_quantization': {'keep_ratio': 0.58203125,...
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 221, in run_qat
+    outputs = _model(inps, targets)
+              │      │     └ <unprintable Tensor object>
+              │      └ <unprintable Tensor object>
+              └ YOLOX(
+                  (embedding): SpikeCountEmbedding()
+                  (backbone): YOLOPAFPN(
+                    (backbone): CSPDarknet(
+                      (stem): Focus(
+                       ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x7110f0b1d620>
+           └ YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarknet(
+                   (stem): Focus(
+                    ...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOX.forward of YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarkne...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolox.py", line 46, in forward
+    loss, iou_loss, conf_loss, cls_loss, l1_loss, num_fg = self.head(
+                                                           └ YOLOX(
+                                                               (embedding): SpikeCountEmbedding()
+                                                               (backbone): YOLOPAFPN(
+                                                                 (backbone): CSPDarknet(
+                                                                   (stem): Focus(
+                                                                    ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x7110f0b1d620>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOXHead.forward of YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                 ...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 195, in forward
+    return self.get_losses(
+           │    └ <function YOLOXHead.get_losses at 0x711095c63740>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 311, in get_losses
+    ) = self.get_assignments(  # noqa
+        │    └ <function YOLOXHead.get_assignments at 0x711095c63920>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ <unprintable tuple object>
+           └ <function YOLOXHead.get_assignments at 0x711095c63880>
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 497, in get_assignments
+    ) = self.simota_matching(cost, pair_wise_ious, gt_classes, num_gt, fg_mask)
+        │    │               │     │               │           │       └ <unprintable Tensor object>
+        │    │               │     │               │           └ 4
+        │    │               │     │               └ <unprintable Tensor object>
+        │    │               │     └ <unprintable Tensor object>
+        │    │               └ <unprintable Tensor object>
+        │    └ <function YOLOXHead.simota_matching at 0x711095c63a60>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 554, in simota_matching
+    k = min(k, cost.size(1))
+            │  │    └ <method 'size' of 'torch._C.TensorBase' objects>
+            │  └ <unprintable Tensor object>
+            └ <unprintable Tensor object>
+
+torch.AcceleratorError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2026-02-13 23:58:38.301 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-13 23:58:38.361 | WARNING  | __main__:maybe_load_ckpt:78 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-13 23:58:38.361 | WARNING  | __main__:maybe_load_ckpt:80 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-13 23:58:41.034 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-13 23:58:41.034 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-13 23:58:41.034 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-13 23:58:42.033 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-13 23:58:42.033 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-13 23:58:42.033 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-14 00:10:49.669 | ERROR    | __main__:<module>:310 - An error has been caught in function '<module>', process 'MainProcess' (42484), thread 'MainThread' (140345197168448):
+Traceback (most recent call last):
+
+> File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 310, in <module>
+    main(exp, args)
+    │    │    └ Namespace(experiment_name='gen1_hapq_closed_loop', name=None, exp_file='exps/default/e_yolox_s_hapq.py', batch_size=16, ckpt=...
+    │    └ ╒═════════════════════════╤══════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x7fa3430fb100>
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 285, in main
+    result = pipeline.run(model=model, output_dir=output_dir)
+             │        │         │                 └ './YOLOX_outputs/gen1_hapq_closed_loop'
+             │        │         └ YOLOX(
+             │        │             (embedding): SpikeCountEmbedding()
+             │        │             (backbone): YOLOPAFPN(
+             │        │               (backbone): CSPDarknet(
+             │        │                 (stem): Focus(
+             │        │                  ...
+             │        └ <function HAPQPipeline.run at 0x7fa3430faf20>
+             └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x7fa34ca43910>
+
+  File "/home/xlang/EAS-SNN/yolox/hapq/pipeline/hapq_pipeline.py", line 137, in run
+    stage_metrics["qat"] = self.run_qat_cb(model)
+    │                      │    │          └ YOLOX(
+    │                      │    │              (embedding): SpikeCountEmbedding()
+    │                      │    │              (backbone): YOLOPAFPN(
+    │                      │    │                (backbone): CSPDarknet(
+    │                      │    │                  (stem): Focus(
+    │                      │    │                   ...
+    │                      │    └ <function main.<locals>.run_qat at 0x7fa34307ade0>
+    │                      └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x7fa34ca43910>
+    └ {'baseline': {'status': 1.0, 'note': 0.0}, 'calibration': {'status': 1.0}, 'pruning_quantization': {'keep_ratio': 0.58203125,...
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 221, in run_qat
+    outputs = _model(inps, targets)
+              │      │     └ <unprintable Tensor object>
+              │      └ <unprintable Tensor object>
+              └ YOLOX(
+                  (embedding): SpikeCountEmbedding()
+                  (backbone): YOLOPAFPN(
+                    (backbone): CSPDarknet(
+                      (stem): Focus(
+                       ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x7fa39e911620>
+           └ YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarknet(
+                   (stem): Focus(
+                    ...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOX.forward of YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarkne...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolox.py", line 46, in forward
+    loss, iou_loss, conf_loss, cls_loss, l1_loss, num_fg = self.head(
+                                                           └ YOLOX(
+                                                               (embedding): SpikeCountEmbedding()
+                                                               (backbone): YOLOPAFPN(
+                                                                 (backbone): CSPDarknet(
+                                                                   (stem): Focus(
+                                                                    ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x7fa39e911620>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOXHead.forward of YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                 ...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 195, in forward
+    return self.get_losses(
+           │    └ <function YOLOXHead.get_losses at 0x7fa34315b740>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 311, in get_losses
+    ) = self.get_assignments(  # noqa
+        │    └ <function YOLOXHead.get_assignments at 0x7fa34315b920>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ <unprintable tuple object>
+           └ <function YOLOXHead.get_assignments at 0x7fa34315b880>
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 497, in get_assignments
+    ) = self.simota_matching(cost, pair_wise_ious, gt_classes, num_gt, fg_mask)
+        │    │               │     │               │           │       └ <unprintable Tensor object>
+        │    │               │     │               │           └ 4
+        │    │               │     │               └ <unprintable Tensor object>
+        │    │               │     └ <unprintable Tensor object>
+        │    │               └ <unprintable Tensor object>
+        │    └ <function YOLOXHead.simota_matching at 0x7fa34315ba60>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 553, in simota_matching
+    k = dynamic_ks[gt_idx].item()
+        │          └ 0
+        └ <unprintable Tensor object>
+
+torch.AcceleratorError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2026-02-14 00:22:08.448 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-14 00:22:08.506 | WARNING  | __main__:maybe_load_ckpt:78 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-14 00:22:08.506 | WARNING  | __main__:maybe_load_ckpt:80 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-14 00:22:11.202 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-14 00:22:11.202 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-14 00:22:11.202 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-14 00:22:12.112 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-14 00:22:12.112 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-14 00:22:12.112 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-14 00:34:20.419 | ERROR    | __main__:<module>:310 - An error has been caught in function '<module>', process 'MainProcess' (45249), thread 'MainThread' (126673255212864):
+Traceback (most recent call last):
+
+> File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 310, in <module>
+    main(exp, args)
+    │    │    └ Namespace(experiment_name='gen1_hapq_closed_loop', name=None, exp_file='exps/default/e_yolox_s_hapq.py', batch_size=16, ckpt=...
+    │    └ ╒═════════════════════════╤══════════════════════════════════════════════════════════════════════════════════════════════════...
+    └ <function main at 0x733403def100>
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 285, in main
+    result = pipeline.run(model=model, output_dir=output_dir)
+             │        │         │                 └ './YOLOX_outputs/gen1_hapq_closed_loop'
+             │        │         └ YOLOX(
+             │        │             (embedding): SpikeCountEmbedding()
+             │        │             (backbone): YOLOPAFPN(
+             │        │               (backbone): CSPDarknet(
+             │        │                 (stem): Focus(
+             │        │                  ...
+             │        └ <function HAPQPipeline.run at 0x733403deef20>
+             └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x733403c44d90>
+
+  File "/home/xlang/EAS-SNN/yolox/hapq/pipeline/hapq_pipeline.py", line 137, in run
+    stage_metrics["qat"] = self.run_qat_cb(model)
+    │                      │    │          └ YOLOX(
+    │                      │    │              (embedding): SpikeCountEmbedding()
+    │                      │    │              (backbone): YOLOPAFPN(
+    │                      │    │                (backbone): CSPDarknet(
+    │                      │    │                  (stem): Focus(
+    │                      │    │                   ...
+    │                      │    └ <function main.<locals>.run_qat at 0x733403d72de0>
+    │                      └ <yolox.hapq.pipeline.hapq_pipeline.HAPQPipeline object at 0x733403c44d90>
+    └ {'baseline': {'status': 1.0, 'note': 0.0}, 'calibration': {'status': 1.0}, 'pruning_quantization': {'keep_ratio': 0.58203125,...
+
+  File "/home/xlang/EAS-SNN/tools/train_hapq_event.py", line 221, in run_qat
+    outputs = _model(inps, targets)
+              │      │     └ <unprintable Tensor object>
+              │      └ <unprintable Tensor object>
+              └ YOLOX(
+                  (embedding): SpikeCountEmbedding()
+                  (backbone): YOLOPAFPN(
+                    (backbone): CSPDarknet(
+                      (stem): Focus(
+                       ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x73345d509620>
+           └ YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarknet(
+                   (stem): Focus(
+                    ...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOX.forward of YOLOX(
+               (embedding): SpikeCountEmbedding()
+               (backbone): YOLOPAFPN(
+                 (backbone): CSPDarkne...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolox.py", line 46, in forward
+    loss, iou_loss, conf_loss, cls_loss, l1_loss, num_fg = self.head(
+                                                           └ YOLOX(
+                                                               (embedding): SpikeCountEmbedding()
+                                                               (backbone): YOLOPAFPN(
+                                                                 (backbone): CSPDarknet(
+                                                                   (stem): Focus(
+                                                                    ...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ <unprintable tuple object>
+           │    └ <function Module._call_impl at 0x73345d509620>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ <unprintable tuple object>
+           └ <bound method YOLOXHead.forward of YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                 ...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 195, in forward
+    return self.get_losses(
+           │    └ <function YOLOXHead.get_losses at 0x733403e53740>
+           └ YOLOXHead(
+               (cls_convs): ModuleList(
+                 (0-2): 3 x Sequential(
+                   (0): BaseConv(
+                     (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 311, in get_losses
+    ) = self.get_assignments(  # noqa
+        │    └ <function YOLOXHead.get_assignments at 0x733403e53920>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/anaconda3/envs/eas-snn/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ <unprintable tuple object>
+           └ <function YOLOXHead.get_assignments at 0x733403e53880>
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 497, in get_assignments
+    ) = self.simota_matching(cost, pair_wise_ious, gt_classes, num_gt, fg_mask)
+        │    │               │     │               │           │       └ <unprintable Tensor object>
+        │    │               │     │               │           └ 4
+        │    │               │     │               └ <unprintable Tensor object>
+        │    │               │     └ <unprintable Tensor object>
+        │    │               └ <unprintable Tensor object>
+        │    └ <function YOLOXHead.simota_matching at 0x733403e53a60>
+        └ YOLOXHead(
+            (cls_convs): ModuleList(
+              (0-2): 3 x Sequential(
+                (0): BaseConv(
+                  (conv): QATConv2d(128, 128, ker...
+
+  File "/home/xlang/EAS-SNN/yolox/models/yolo_head.py", line 553, in simota_matching
+    k = dynamic_ks[gt_idx].item()
+        │          └ 0
+        └ <unprintable Tensor object>
+
+torch.AcceleratorError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2026-02-14 00:52:21.555 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-14 00:52:21.610 | WARNING  | __main__:maybe_load_ckpt:78 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-14 00:52:21.610 | WARNING  | __main__:maybe_load_ckpt:80 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-14 00:52:24.144 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-14 00:52:24.144 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-14 00:52:24.144 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-14 00:52:25.291 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-14 00:52:25.291 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-14 00:52:25.291 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-14 00:53:06.970 | INFO     | __main__:maybe_load_ckpt:64 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-14 00:53:07.025 | WARNING  | __main__:maybe_load_ckpt:78 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-14 00:53:07.025 | WARNING  | __main__:maybe_load_ckpt:80 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-14 00:53:09.515 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-14 00:53:09.515 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-14 00:53:09.515 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 3 Files after Filtering: ['/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_15-14-36_1159500000_1219500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/train/detection_dataset_duration_60s_ratio_1.0/train/17-04-06_09-57-37_6344500000_6404500000_bbox.npy', '/home/xlang/EAS-SNN/datasets/Gen1/val/detection_dataset_duration_60s_ratio_1.0/val/17-04-13_19-17-27_976500000_1036500000_bbox.npy']
+2026-02-14 00:53:10.671 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-14 00:53:10.671 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-14 00:53:10.672 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-14 01:05:22.715 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-14 01:05:22.719 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-14 01:05:22.720 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-14 01:05:22.721 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-14 01:05:22.723 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-14 01:05:22.724 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-14 01:05:22.724 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-14 01:05:22.725 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-14 01:05:22.726 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-14 01:05:22.727 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-14 01:05:22.728 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-14 01:05:22.729 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-14 01:05:22.730 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-14 01:05:22.731 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-14 01:05:22.732 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-14 01:05:22.733 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-14 01:06:46.315 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-14 01:06:46.346 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-14 01:18:45.290 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-14 01:18:45.292 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-14 01:18:45.293 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-14 01:18:45.294 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-14 01:18:45.295 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-14 01:18:45.296 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-14 01:18:45.297 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-14 01:18:45.298 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-14 01:18:45.299 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-14 01:18:45.300 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-14 01:18:45.302 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-14 01:18:45.304 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-14 01:18:45.305 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-14 01:18:45.306 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-14 01:18:45.307 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-14 01:18:45.308 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-14 01:20:07.676 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-14 01:20:07.736 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-14 01:32:16.056 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 0
+2026-02-14 01:32:16.060 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 1
+2026-02-14 01:32:16.061 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 2
+2026-02-14 01:32:16.062 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 3
+2026-02-14 01:32:16.063 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 4
+2026-02-14 01:32:16.064 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 5
+2026-02-14 01:32:16.065 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 6
+2026-02-14 01:32:16.066 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 7
+2026-02-14 01:32:16.067 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 8
+2026-02-14 01:32:16.068 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 9
+2026-02-14 01:32:16.069 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 10
+2026-02-14 01:32:16.071 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 11
+2026-02-14 01:32:16.072 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 12
+2026-02-14 01:32:16.073 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 13
+2026-02-14 01:32:16.074 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 14
+2026-02-14 01:32:16.075 | WARNING  | yolox.models.yolo_head:get_assignments:482 - NaN or Inf found in cls_preds_ at batch 15
+2026-02-14 01:33:36.810 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-14 01:33:36.861 | WARNING  | yolox.evaluators.event_evaluator:evaluate_prediction:444 - Use standard COCOeval.
+2026-02-14 01:33:37.089 | INFO     | __main__:export_search_log:138 - Exported NAS trajectory to experiments/gen1_hapq/gen1_search_trajectory.csv
+2026-02-14 01:33:37.089 | INFO     | __main__:main:296 - HAPQ summary copied to experiments/gen1_hapq/gen1_hapq_summary.json
+2026-02-14 01:33:37.089 | INFO     | __main__:main:297 - HAPQ pipeline done. Summary: ./YOLOX_outputs/gen1_hapq_closed_loop/hapq_summary.json

@@ -1,0 +1,33 @@
+{
+  "estimate": {
+    "dsp": 15312.0,
+    "bram": 47.30000000000002,
+    "lut": 244992.0,
+    "bw_bytes": 88064.0
+  },
+  "vivado": {
+    "lut": 2166.0,
+    "ff": 74.0,
+    "dsp": 108.0,
+    "bram": 0.0,
+    "total_power": 0.757,
+    "dynamic_power": 0.165,
+    "static_power": 0.593,
+    "freq_mhz": 702.2471910112359,
+    "latency_ms": 0.005696,
+    "fps": 175561.797752809,
+    "energy_mj": 0.004311872,
+    "bw_mbs": 15460.674157303374
+  },
+  "error_pct": {
+    "dsp": -99.29467084639498,
+    "bram": -100.0,
+    "lut": -99.1158894984326
+  },
+  "timing": {
+    "wns": 3.576,
+    "tns": 0.0,
+    "timing_ok": true,
+    "timing_violation": false
+  }
+}

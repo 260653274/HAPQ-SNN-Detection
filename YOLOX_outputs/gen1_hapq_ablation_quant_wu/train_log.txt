@@ -1,0 +1,20 @@
+2026-02-26 04:10:52.348 | INFO     | __main__:maybe_load_ckpt:67 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-26 04:10:52.500 | WARNING  | __main__:maybe_load_ckpt:81 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-26 04:10:52.500 | WARNING  | __main__:maybe_load_ckpt:83 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-26 04:10:52.966 | INFO     | __main__:run_qat:191 - QAT epochs is 0, running evaluation only.
+2026-02-26 04:10:52.969 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-26 04:10:52.969 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-26 04:10:52.969 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-26 04:11:01.038 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-26 04:11:01.114 | INFO     | __main__:main:352 - HAPQ summary copied to experiments/gen1_hapq/ablation/gen1_hapq_ablation_quant_wu.json
+2026-02-26 04:11:01.114 | INFO     | __main__:main:353 - HAPQ pipeline done. Summary: ./YOLOX_outputs/gen1_hapq_ablation_quant_wu/hapq_summary.json
+2026-02-26 04:11:18.915 | INFO     | __main__:maybe_load_ckpt:67 - Loading warm-start checkpoint from ckpt/best_ckpt.pth
+2026-02-26 04:11:18.971 | WARNING  | __main__:maybe_load_ckpt:81 - Missing 39 keys while loading HAPQ warm-start ckpt.
+2026-02-26 04:11:18.971 | WARNING  | __main__:maybe_load_ckpt:83 - Unexpected 82 keys while loading HAPQ warm-start ckpt.
+2026-02-26 04:11:19.143 | INFO     | __main__:run_qat:191 - QAT epochs is 0, running evaluation only.
+2026-02-26 04:11:19.147 | INFO     | yolox.data.datasets.gen1:extract_labels:300 - >>> Bounding box verification: 
+2026-02-26 04:11:19.147 | INFO     | yolox.data.datasets.gen1:extract_labels:309 - >>> Continuous Neighborhood: Streaming 1 slices processing
+2026-02-26 04:11:19.147 | INFO     | yolox.data.datasets.gen1:extract_labels:310 - >>> Discard 0 Files after Filtering: []
+2026-02-26 04:11:23.599 | INFO     | yolox.evaluators.event_evaluator:evaluate_prediction:399 - Evaluate in main process...
+2026-02-26 04:11:23.706 | INFO     | __main__:main:352 - HAPQ summary copied to experiments/gen1_hapq/ablation/gen1_hapq_ablation_quant_wu.json
+2026-02-26 04:11:23.706 | INFO     | __main__:main:353 - HAPQ pipeline done. Summary: ./YOLOX_outputs/gen1_hapq_ablation_quant_wu/hapq_summary.json

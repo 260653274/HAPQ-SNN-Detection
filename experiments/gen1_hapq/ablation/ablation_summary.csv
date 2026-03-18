@@ -1,0 +1,6 @@
+mode,experiment,mAP,mAP50,Params,SynOps,keep_ratio,summary_json
+prune_only,gen1_ablation_prune_only,0.2650899477709294,0.427904996329521,0.0,0.0,0.58203125,experiments/gen1_hapq/ablation/gen1_ablation_prune_only.json
+quant_w,gen1_ablation_quant_w,0.34602914763757714,0.5544175323271535,0.0,0.0,0.58203125,experiments/gen1_hapq/ablation/gen1_ablation_quant_w.json
+quant_wu,gen1_ablation_quant_wu,0.35623841808787465,0.5446491470627012,0.0,0.0,0.58203125,experiments/gen1_hapq/ablation/gen1_ablation_quant_wu.json
+full,gen1_ablation_full,0.2841463832277047,0.45632423410629364,0.0,0.0,0.58203125,experiments/gen1_hapq/ablation/gen1_ablation_full.json
+hapq,gen1_ablation_hapq,0.4248920298549338,0.7216956070572187,0.0,0.0,0.58203125,experiments/gen1_hapq/ablation/gen1_ablation_hapq.json
