@@ -261,11 +261,3 @@ python tools/compare_vivado_cost.py \
 ```
 
 ---
-
-## License
-
-*Add your license information here.*
-
-## Citation
-
-*If this work is part of a publication, add your BibTeX citation here.*
